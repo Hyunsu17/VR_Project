@@ -83,7 +83,7 @@ public class Controll : MonoBehaviour
     {
         if (collision.transform.gameObject.tag=="obstacle") //장애물에 부딪히는 경우
         {
-            SceneManager.LoadScene(manager.stage);
+            eventUI.SetActive(true);
         }
     }
 
@@ -100,11 +100,11 @@ public class Controll : MonoBehaviour
             if (itemCount == manager.TotalItemCount)
             {
                 //모든 체크포인트 도달시 클리어
-                SceneManager.LoadScene(manager.stage);
+                SceneManager.LoadScene(manager.stage2);
             }
             else
             {
-                SceneManager.LoadScene(manager.stage);
+                SceneManager.LoadScene(manager.stage1);
             }
         }
     }
@@ -126,6 +126,7 @@ public class Controll : MonoBehaviour
     //게임 관련 변수
     int itemCount;
     public GameManager manager;
+    public GameObject eventUI;
 
 
     //바퀴 충돌, 모형 관련 변수

@@ -8,7 +8,8 @@ public class GameManager : MonoBehaviour
     //check point 수
     public int TotalItemCount;
     //현재 스테이지 저장하는 변수
-    public string stage;
+    public string stage1;
+    public string stage2;
 
     private void Awake() {
 
@@ -16,7 +17,5 @@ public class GameManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "player")
-            SceneManager.LoadScene(stage);
     }
 }
